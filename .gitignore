@@ -1,0 +1,12 @@
+composer.phar
+web/bundles/
+web/js/
+web/css/
+app/cache/*
+app/logs/*
+vendor/
+app/app.sqlite
+/bin/
+/app/config/parameters.yml
+/app/check.php
+/app/SymfonyRequirements.php
