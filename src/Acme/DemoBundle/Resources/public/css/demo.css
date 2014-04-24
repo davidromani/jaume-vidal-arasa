@@ -1,16 +1,24 @@
-.page{
-    background:#eeeeee;
+.page {
+    background: #EEE;
 }
-.page__hero-unit{
-    background:#a3ca5f;
-    margin-top:20px;
+
+.page__hero-unit {
+    background: #a3ca5f;
+    margin-top: 20px;
 }
-    .page__hero-unit h2{
-        color:#fff;
-    }
-.page__nav{
+
+.page__hero-unit h2 {
+    color: #FFF;
+}
+
+.page__nav {
     margin-top:40px;
 }
-.navbar--external{
+
+.navbar--external {
     font-size:.9em;
+}
+
+div.main-header img {
+    width: 100%;
 }
