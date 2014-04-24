@@ -1,7 +1,11 @@
 parameters:
     database_driver:   pdo_sqlite
     database_path:     "%kernel.root_dir%/app.sqlite"
-
+    database_host:     null
+    database_port:     null
+    database_name:     testdb
+    database_user:     user
+    database_password: pass
     phpcr_backend:
         # use Jackalope Doctrine DBAL
         type: doctrinedbal
@@ -12,11 +16,10 @@ parameters:
     phpcr_workspace:   default
     phpcr_user:        admin
     phpcr_password:    admin
-
     mailer_transport:  smtp
     mailer_host:       127.0.0.1
     mailer_user:       ~
     mailer_password:   ~
-
     locale:            en
+    locales:           [en, es, ca]
     secret:            ThisTokenIsNotSoSecretChangeIt

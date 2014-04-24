@@ -4,3 +4,23 @@ Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page:
         label: Demo
         title: CMF Demo
         body: Hello! This page is created by the Symfony CMF.
+    contact:
+        id: /cms/simple/contact
+        label: Contact
+        title: CMF Contact
+        body: Contact webpage helloworld.
+    works:
+        id: /cms/simple/works
+        label: Works
+        title: CMF Works
+        body: Works webpage helloworld.
+    works-mondrian:
+        id: /cms/simple/works/mondrian
+        label: Mondrian work
+        title: Mondrian work
+        body: Mondrian work helloworld.
+    works-castor:
+        id: /cms/simple/works/castor
+        label: Castor work
+        title: Castor work
+        body: Castor work helloworld.

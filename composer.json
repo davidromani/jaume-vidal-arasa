@@ -31,6 +31,7 @@
         "symfony-cmf/symfony-cmf": "1.1.*",
         "symfony-cmf/simple-cms-bundle": "1.1.*",
         "symfony-cmf/create-bundle": "1.1.*",
+        "lunetics/locale-bundle": "2.2.*",
         "nelmio/alice": "1.*"
     },
     "require-dev": {
