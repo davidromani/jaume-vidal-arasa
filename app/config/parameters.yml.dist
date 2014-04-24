@@ -1,22 +1,17 @@
 parameters:
     database_driver:   pdo_sqlite
-    database_path: '%kernel.root_dir%/app.sqlite'
-    database_host: null
-    database_port: null
-    database_name: null
-    database_user: null
-    database_password: null
+    database_path:     "%kernel.root_dir%/app.sqlite"
 
     phpcr_backend:
+        # use Jackalope Doctrine DBAL
         type: doctrinedbal
         connection: default
-# Enable these lines to use file system caching for the storage API
-#        caches:
-#            meta: liip_doctrine_cache.ns.meta
-#            nodes: liip_doctrine_cache.ns.nodes
-    phpcr_workspace: default
-    phpcr_user: admin
-    phpcr_pass: admin
+        caches:
+            meta: doctrine_cache.providers.phpcr_meta
+            nodes: doctrine_cache.providers.phpcr_nodes
+    phpcr_workspace:   default
+    phpcr_user:        admin
+    phpcr_password:    admin
 
     mailer_transport:  smtp
     mailer_host:       127.0.0.1
@@ -24,5 +19,4 @@ parameters:
     mailer_password:   ~
 
     locale:            en
-    locales:           [en, de]
     secret:            ThisTokenIsNotSoSecretChangeIt
