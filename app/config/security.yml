@@ -22,11 +22,11 @@ security:
             pattern: ^/
             anonymous: ~
             http_basic:
-                realm: "Secured Demo Area (username: admin, password: admin)"
+                realm: "Secured Demo Area"
 
     access_control:
         - { path: ^(/(de|fr|en))?/admin, roles: ROLE_ADMIN }
-        #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login, roles: ROLE_ADMIN }
         - { path: ^/efconnect, role: ROLE_USER }
         - { path: ^/elfinder, role: ROLE_USER }
         
