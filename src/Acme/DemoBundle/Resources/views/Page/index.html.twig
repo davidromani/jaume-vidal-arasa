@@ -1,8 +1,6 @@
 {% extends 'AcmeDemoBundle::layout.html.twig' %}
 
-{% block hero_unit %}
-<h1>{{ cmfMainContent.title }}</h1>
-{% endblock %}
+{% block title %}{{ cmfMainContent.title }} · {{ parent() }}{% endblock %}
 
 {% block main %}
     {% createphp cmfMainContent as="rdf" %}

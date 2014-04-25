@@ -2,6 +2,10 @@
     background: #EEE;
 }
 
+.page__main {
+    min-height: 150px;
+}
+
 .page__hero-unit {
     background: #a3ca5f;
     margin-top: 20px;

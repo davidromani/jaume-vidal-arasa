@@ -1,26 +1,36 @@
 Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page:
-    demo:
-        id: /cms/simple/demo
-        label: Demo
-        title: CMF Demo
-        body: Hello! This page is created by the Symfony CMF.
     contact:
-        id: /cms/simple/contact
-        label: Contact
-        title: CMF Contact
-        body: Contact webpage helloworld.
-    works:
-        id: /cms/simple/works
-        label: Works
-        title: CMF Works
-        body: Works webpage helloworld.
-    works-mondrian:
-        id: /cms/simple/works/mondrian
-        label: Mondrian work
-        title: Mondrian work
-        body: Mondrian work helloworld.
-    works-castor:
-        id: /cms/simple/works/castor
-        label: Castor work
-        title: Castor work
-        body: Castor work helloworld.
+        id: /cms/simple/contacte
+        label: contacte
+        title: contacte
+        body: contacte.
+    biografia:
+        id: /cms/simple/biografia
+        label: biografia
+        title: biografia
+        body: biografia.
+    treballs:
+        id: /cms/simple/treball-recent
+        label: treball recent
+        title: treball recent
+        body: treball recent.
+    treball-mondrian:
+        id: /cms/simple/treball-recent/mondrian
+        label: mondrian
+        title: mondrian
+        body: mondrian.
+    treball-castor:
+        id: /cms/simple/treball-recent/castor
+        label: castor
+        title: castor
+        body: castor.
+    arxiu:
+        id: /cms/simple/arxiu
+        label: arxiu
+        title: arxiu
+        body: arxiu.
+    publicacions:
+        id: /cms/simple/publicacions
+        label: publicacions
+        title: publicacions
+        body: publicacions.
