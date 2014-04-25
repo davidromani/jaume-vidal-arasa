@@ -3,7 +3,13 @@
 {% block title %}{{ cmfMainContent.title }} · {{ parent() }}{% endblock %}
 
 {% block main %}
-    {% createphp cmfMainContent as="rdf" %}
-    {{ rdf|raw }}
+    {% createphp cmfMainContent as="rdf" noautotag %}
+    <div {{ createphp_attributes(rdf) }}>
+        {#<h1 class="my-title" {{ createphp_attributes( rdf.title ) }}>{{ createphp_content( rdf.title ) }}</h1>#}
+        <div {{ createphp_attributes( rdf.body ) }}>{{ createphp_content( rdf.body ) }}</div>
+    </div>
     {% endcreatephp %}
+    {#{% createphp cmfMainContent as="rdf" %}#}
+    {#{{ rdf|raw }}#}
+    {#{% endcreatephp %}#}
 {% endblock %}

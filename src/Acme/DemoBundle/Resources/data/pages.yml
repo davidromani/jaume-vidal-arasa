@@ -9,11 +9,6 @@ Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page:
         label: biografia
         title: biografia
         body: biografia.
-    treballs:
-        id: /cms/simple/treball-recent
-        label: treball recent
-        title: treball recent
-        body: treball recent.
     treball-mondrian:
         id: /cms/simple/treball-recent/mondrian
         label: mondrian
