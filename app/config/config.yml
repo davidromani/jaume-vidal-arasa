@@ -36,7 +36,7 @@ twig:
 assetic:
     debug:          "%kernel.debug%"
     use_controller: false
-    bundles:        [ ]
+    #bundles:        [ ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
@@ -90,6 +90,8 @@ doctrine_cache:
 
 # Cmf Configuration
 cmf_core:
+    multilang:
+        locales: %locales%
     persistence:
         phpcr: true
         # if you want another basepath
@@ -98,19 +100,31 @@ cmf_core:
 
 # CMF Routing
 cmf_routing:
+    chain:
+        routers_by_id:
+            cmf_routing.dynamic_router: 20
+            router.default: 100
     dynamic:
         templates_by_class:
             Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page: AcmeDemoBundle:Page:index.html.twig
-
-# KNP Menu
-knp_menu:
-    twig: true
 
 # CMF Block
 cmf_block:
     persistence:
         phpcr:
             block_basepath: /cms/blocks
+
+# CMF Create (inline editing)
+cmf_create:
+    editor_base_path: /bundles/cmfcreate/vendor/ckeditor/
+    security:
+        # WARNING: REMOVE THIS FOR PRODUCTION SITES
+        # for demo purposes we are allowing anonymous inline editing
+        role: IS_AUTHENTICATED_ANONYMOUSLY
+
+# KNP Menu
+knp_menu:
+    twig: true
 
 # Sonata Block
 sonata_block:
@@ -132,3 +146,20 @@ lunetics_locale:
         - router
         - browser
     allowed_locales:  %locales%
+
+# FOS Rest
+fos_rest:
+    view:
+        force_redirects:
+          html: true
+        formats:
+            json: true
+            xml: true
+        templating_formats:
+            html: true
+    allowed_methods_listener: true
+    access_denied_listener:
+        json: true
+    format_listener:
+        rules:
+            - { path: ^/, priorities: [ html, json, xml, css ], fallback_format: html, prefer_extension: false }

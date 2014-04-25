@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "888f43e50cd8df6c91f9ce42fc9356d3",
+    "hash": "10839bef56507504e0e3f7059eb6cea1",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -3604,6 +3604,58 @@
                 "negotiation"
             ],
             "time": "2014-02-26 13:56:25"
+        },
+        {
+            "name": "wjzijderveld/check-bundles",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wjzijderveld/CheckBundles.git",
+                "reference": "98cff7f48855640115c14918d45695e57f21748a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wjzijderveld/CheckBundles/zipball/98cff7f48855640115c14918d45695e57f21748a",
+                "reference": "98cff7f48855640115c14918d45695e57f21748a",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/http-kernel": ">=2.0.0"
+            },
+            "require-dev": {
+                "composer/composer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "WillemJan": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Willem-Jan Zijderveld",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A script which checks for bundles in your composer.json that aren't registered in your Kernel. For now, only packages with type symfony-bundle will be checked",
+            "homepage": "https://github.com/wjzijderveld/CheckBundles",
+            "keywords": [
+                "bundles",
+                "check",
+                "composer",
+                "script",
+                "symfony"
+            ],
+            "time": "2014-01-21 20:26:03"
         }
     ],
     "packages-dev": [
