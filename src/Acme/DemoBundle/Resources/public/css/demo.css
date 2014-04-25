@@ -31,22 +31,54 @@ div.main-header img {
     width: 100%;
 }
 
+div.main-header h1 {
+    font-size: 14px;
+    margin-bottom: 60px;
+}
+
 a.create-ui-toggle {
     width: 50px;
     height: 45px;
 }
 
 footer a {
-    color: #000;
     margin: 0 10px;
 }
 
-footer a:hover {
+a {
+    color: #000;
+}
+
+a:hover {
     color: #FFF;
     background-color: #000;
     text-decoration: none;
 }
 
+li {
+    margin: 0;
+    padding: 10px 15px;
+}
+
+li.active a, li.active a:hover {
+    color: #FFF;
+    background-color: #000;
+}
+
+li.active a {
+    margin: 0;
+    padding: 0;
+}
+
 hr {
     border-top: 1px solid #000;
+}
+
+@media (min-width: 768px){
+    .navbar-nav{
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+        float:none;
+    }
 }

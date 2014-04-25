@@ -1,8 +1,6 @@
-{% extends 'AcmeDemoBundle::layout.html.twig' %}
+{% extends 'AcmeDemoBundle::works.html.twig' %}
 
-{% block title %}{{ cmfMainContent.title }} · {{ parent() }}{% endblock %}
-
-{% block main %}
+{% block worksdetail %}
     {% createphp cmfMainContent as="rdf" noautotag %}
     <div {{ createphp_attributes(rdf) }}>
         <div {{ createphp_attributes( rdf.body ) }}>{{ createphp_content( rdf.body ) }}</div>

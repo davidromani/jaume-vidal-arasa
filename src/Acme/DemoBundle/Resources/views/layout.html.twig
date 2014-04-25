@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="minimum-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no">
     <meta charset="UTF-8">
-    <title>{% block title %}Jaume Vidal Arasa{% endblock %}</title>
+    <title>{% block title %}jaume vidal arasa{% endblock %}</title>
     {% block stylesheets %}
         <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
         {% include "CmfCreateBundle::includecssfiles.html.twig" %}
@@ -16,10 +16,10 @@
 </head>
 <body class="container page">
     <div class="main-header">
-        <img src="{{ asset('bundles/acmedemo/images/mondrian.jpg') }}" alt="Mondrian logo"/>
+        <a href="{{ path('/cms/simple') }}"><img src="{{ asset('bundles/acmedemo/images/mondrian.jpg') }}" alt="Mondrian logo"/></a>
         <h1 class="text-center">JAUME VIDAL ARASA</h1>
     </div>
-    <nav class="navbar navbar-inverse page__nav" role="navigation">
+    <nav class="navbar page__nav" role="navigation">
         <div class="container-fluid">
             {{ knp_menu_render('simple', {'template': 'AcmeDemoBundle:Menu:bootstrap.html.twig', 'currentClass': 'active', 'depth': 1}) }}
         </div>
