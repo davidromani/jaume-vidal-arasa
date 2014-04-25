@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
+    <meta name="viewport" content="minimum-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no">
     <meta charset="UTF-8">
     <title>{% block title %}Jaume Vidal Arasa{% endblock %}</title>
     {% block stylesheets %}
@@ -8,6 +9,8 @@
         <link href="{{ asset('bundles/acmedemo/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('bundles/acmedemo/css/demo.css') }}" rel="stylesheet">
     {% endblock %}
+    {# HTML5 shim, for IE6-8 support of HTML5 elements #}
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     {% block javascripts %}{% endblock %}
 </head>
 <body class="container page">
@@ -20,9 +23,6 @@
             {{ knp_menu_render('simple', {'template': 'AcmeDemoBundle:Menu:bootstrap.html.twig', 'currentClass': 'active', 'depth': 1}) }}
         </div>
     </nav>
-    {#<div class="jumbotron page__hero-unit">#}
-        {#{% block hero_unit %}{% endblock %}#}
-    {#</div>#}
     <div class="page__main">
         {% block main %}{% endblock %}
     </div>
