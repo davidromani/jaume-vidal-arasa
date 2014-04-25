@@ -29,6 +29,7 @@ class AppKernel extends Kernel
             new Symfony\Cmf\Bundle\BlockBundle\CmfBlockBundle(),
             new Symfony\Cmf\Bundle\MenuBundle\CmfMenuBundle(),
             new Symfony\Cmf\Bundle\CreateBundle\CmfCreateBundle(),
+            new Symfony\Cmf\Bundle\MediaBundle\CmfMediaBundle(),
             // Sonata
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Sonata\CoreBundle\SonataCoreBundle(),
@@ -40,6 +41,8 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle(),
             // Lunetics
             new Lunetics\LocaleBundle\LuneticsLocaleBundle(),
+            // Liip
+            new Liip\ImagineBundle\LiipImagineBundle(),
             // Custom
             new Acme\DemoBundle\AcmeDemoBundle(),
         );

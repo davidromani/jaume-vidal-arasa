@@ -31,6 +31,10 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    form:
+        resources:
+            - 'CmfMediaBundle:Form:fields.html.twig'
+    exception_controller: 'FOS\RestBundle\Controller\ExceptionController::showAction'
 
 # Assetic Configuration
 assetic:
@@ -68,7 +72,7 @@ doctrine_phpcr:
         password: "%phpcr_password%"
     odm:
         auto_mapping: true
-        auto_generate_proxy_classes: "%kernel.debug%"
+        auto_generate_proxy_classes: %kernel.debug%
         locales:
             en:
                 - es
@@ -88,7 +92,7 @@ doctrine_cache:
         phpcr_nodes:
             type: file_system
 
-# Cmf Configuration
+# CMF Core
 cmf_core:
     multilang:
         locales: %locales%
@@ -119,6 +123,13 @@ cmf_create:
     editor_base_path: /bundles/cmfcreate/vendor/ckeditor/
     security:
         role: ROLE_ADMIN
+
+# CMF Media
+cmf_media:
+    upload_file_role:        ROLE_CAN_UPLOAD_FILE
+    use_jms_serializer:      auto
+    use_elfinder:            auto
+    use_imagine:             auto
 
 # KNP Menu
 knp_menu:
