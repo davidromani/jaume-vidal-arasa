@@ -22,3 +22,17 @@
 div.main-header img {
     width: 100%;
 }
+
+a.create-ui-toggle {
+    width: 50px;
+    height: 45px;
+}
+
+footer a {
+    color: #000;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #000;
+}

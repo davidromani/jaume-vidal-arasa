@@ -5,8 +5,6 @@
 {% endblock %}
 
 {% block main %}
-    <p>{{ cmfMainContent.body }}</p>
-    <hr>
     {% createphp cmfMainContent as="rdf" %}
     {{ rdf|raw }}
     {% endcreatephp %}

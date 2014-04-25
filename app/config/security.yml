@@ -17,15 +17,14 @@ security:
         dev:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
             security: false
-
         main:
             pattern: ^/
             anonymous: ~
             http_basic:
-                realm: "Secured Demo Area"
+                realm: "Secured Area"
 
     access_control:
-        - { path: ^(/(de|fr|en))?/admin, roles: ROLE_ADMIN }
+        #- { path: ^(/(de|fr|en))?/admin, roles: ROLE_ADMIN }
         - { path: ^/login, roles: ROLE_ADMIN }
         - { path: ^/efconnect, role: ROLE_USER }
         - { path: ^/elfinder, role: ROLE_USER }

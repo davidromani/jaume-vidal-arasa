@@ -26,9 +26,9 @@
     <div class="page__main">
         {% block main %}{% endblock %}
     </div>
-    <footer>
-        <a href="#">facebook</a>
-        <a href="#">twitter</a>
+    <footer class="text-center">
+        <a target="_blank" href="https://www.facebook.com/jaume.vidal">facebook</a>
+        <a target="_blank" href="https://twitter.com/jaumevidalarasa">twitter</a>
     </footer>
     {% block bottom_scripts %}
         {% render(controller("cmf_create.jsloader.controller:includeJSFilesAction", { "editor": "ckeditor", "_locale": app.request.locale })) %}
