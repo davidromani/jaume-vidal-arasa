@@ -30,8 +30,8 @@
         <a href="#">facebook</a>
         <a href="#">twitter</a>
     </footer>
-    {#{% block bottom_scripts %}#}
+    {% block bottom_scripts %}
         {% render(controller("cmf_create.jsloader.controller:includeJSFilesAction", { "editor": "ckeditor", "_locale": app.request.locale })) %}
-    {#{% endblock %}#}
+    {% endblock %}
 </body>
 </html>

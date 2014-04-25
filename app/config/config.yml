@@ -118,9 +118,7 @@ cmf_block:
 cmf_create:
     editor_base_path: /bundles/cmfcreate/vendor/ckeditor/
     security:
-        # WARNING: REMOVE THIS FOR PRODUCTION SITES
-        # for demo purposes we are allowing anonymous inline editing
-        role: IS_AUTHENTICATED_ANONYMOUSLY
+        role: ROLE_ADMIN
 
 # KNP Menu
 knp_menu:
