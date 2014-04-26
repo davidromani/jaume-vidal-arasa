@@ -75,6 +75,16 @@ a:hover {
     border-bottom: solid 1px #000;
 }
 
+div.left-side-submenu ul.nav.navbar-nav {
+    margin: 0;
+}
+
+div.left-side-submenu .nav>li {
+    border-bottom: none;
+    float: none;
+    margin: 5px 0;
+}
+
 .navbar {
     border: none;
 }
