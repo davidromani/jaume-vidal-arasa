@@ -49,6 +49,14 @@ footer a {
     margin: 0 10px;
 }
 
+footer div.row.sub-footer {
+    margin-top: 60px;
+}
+
+footer div.row.sub-footer div a {
+    margin: 0;
+}
+
 a {
     color: #000;
 }
