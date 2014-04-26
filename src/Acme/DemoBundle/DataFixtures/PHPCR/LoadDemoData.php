@@ -66,6 +66,22 @@ class LoadDemoData implements FixtureInterface
         $manager->persist($page);
 
         $page = new Page();
+        $page->setTitle('welcome');
+        $page->setLabel('welcome');
+        $page->setBody('welcome.');
+        $page->setDefault('_template', 'AcmeDemoBundle::work.detail.html.twig');
+        $page->setPosition($workpage, 'welcome');
+        $manager->persist($page);
+
+        $page = new Page();
+        $page->setTitle('duros a...');
+        $page->setLabel('duros a...');
+        $page->setBody('duros a...');
+        $page->setDefault('_template', 'AcmeDemoBundle::work.detail.html.twig');
+        $page->setPosition($workpage, 'duros-a');
+        $manager->persist($page);
+
+        $page = new Page();
         $page->setTitle('arxiu');
         $page->setLabel('arxiu');
         $page->setBody('arxiu.');
