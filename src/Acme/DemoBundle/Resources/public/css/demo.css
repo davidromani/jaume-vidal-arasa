@@ -10,19 +10,6 @@ body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     min-height: 150px;
 }
 
-.page__hero-unit {
-    background: #a3ca5f;
-    margin-top: 20px;
-}
-
-.page__hero-unit h2 {
-    color: #FFF;
-}
-
-/*.page__nav {*/
-    /*margin-top:40px;*/
-/*}*/
-
 .navbar--external {
     font-size:.9em;
 }
@@ -67,8 +54,12 @@ a:hover {
 }
 
 .nav>li>a {
-    margin: 0 30px;
-    padding: 0;
+    padding: 0 30px;
+    margin: 0;
+}
+
+.nav>li.active>a, .nav>li>a:hover {
+    background: url('../images/ahover.png') no-repeat 14px 8px;
 }
 
 .nav>li {
