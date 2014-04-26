@@ -28,8 +28,18 @@
         {% block main %}{% endblock %}
     </div>
     <footer class="text-center">
-        <a target="_blank" href="https://www.facebook.com/jaume.vidal">facebook</a>
-        <a target="_blank" href="https://twitter.com/jaumevidalarasa">twitter</a>
+        <div class="row">
+            <div class="col-md-12">
+                <a target="_blank" href="https://www.facebook.com/jaume.vidal">facebook</a>
+                <a target="_blank" href="https://twitter.com/jaumevidalarasa">twitter</a>
+            </div>
+        </div>
+        <div class="row" style="margin-top:60px">
+            <div class="col-md-12">
+                pàgina web desenvolupada per <a target="_blank" href="http://www.flux.cat">www.flux.cat</a>
+            </div>
+        </div>
+
     </footer>
     {% block bottom_scripts %}
         {% render(controller("cmf_create.jsloader.controller:includeJSFilesAction", { "editor": "ckeditor", "_locale": app.request.locale })) %}

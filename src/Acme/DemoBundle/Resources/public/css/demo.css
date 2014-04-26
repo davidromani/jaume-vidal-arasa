@@ -41,6 +41,10 @@ a.create-ui-toggle {
     height: 45px;
 }
 
+footer {
+    margin: 60px 0;
+}
+
 footer a {
     margin: 0 10px;
 }
@@ -60,7 +64,7 @@ a:hover {
 }
 
 .nav>li {
-    border-bottom: solid 2px #000;
+    border-bottom: solid 1px #000;
 }
 
 .navbar {
