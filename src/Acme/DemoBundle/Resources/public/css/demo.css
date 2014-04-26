@@ -37,7 +37,7 @@ footer a {
 }
 
 footer a:hover {
-    background: url('../images/ahover.png') no-repeat 4px 7px;
+    background: url('../images/ahover.gif') no-repeat 4px 7px;
 }
 
 footer div.row.sub-footer {
@@ -68,7 +68,7 @@ a:hover {
 }
 
 .nav>li.active>a, .nav>li>a:hover {
-    background: url('../images/ahover.png') no-repeat 15px 9px;
+    background: url('../images/ahover.gif') no-repeat 15px 9px;
 }
 
 .nav>li {
