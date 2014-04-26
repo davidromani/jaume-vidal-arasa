@@ -67,7 +67,7 @@ a:hover {
     margin: 0;
 }
 
-.nav>li.active>a, .nav>li>a:hover {
+.nav>li.active>a, .nav>li>a:hover, .nav>li.current_ancestor>a {
     background: url('../images/ahover.gif') no-repeat 15px 9px;
 }
 

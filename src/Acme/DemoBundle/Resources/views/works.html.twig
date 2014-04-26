@@ -4,11 +4,11 @@
 
 {% block main %}
     <div class="row">
-        <div class="col-md-3 left-side-submenu">
+        <div class="col-xs-3 left-side-submenu">
             {% set menuItem = knp_menu_get('simple', ['treball-recent']) %}
             {{ knp_menu_render(menuItem, {'template': 'AcmeDemoBundle:Menu:bootstrap.html.twig', 'currentClass': 'active', 'depth': 1}) }}
         </div>
-        <div class="col-md-9">
+        <div class="col-xs-9">
             {% block worksdetail %}{% endblock %}
         </div>
     </div>
