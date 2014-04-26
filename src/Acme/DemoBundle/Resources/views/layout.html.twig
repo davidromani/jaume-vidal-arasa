@@ -3,6 +3,9 @@
 <head>
     <meta name="viewport" content="minimum-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no">
     <meta charset="UTF-8">
+    <meta name="description" content="jaume vidal arasa web">
+    <meta name="author" content="www.flux.cat">
+    <meta name="keywords" content="jaume, vidal, arasa, artista, symfony, cmf">
     <title>{% block title %}jaume vidal arasa{% endblock %}</title>
     {% block stylesheets %}
         <link href='http://fonts.googleapis.com/css?family=PT+Mono' rel='stylesheet' type='text/css'>
@@ -39,7 +42,6 @@
                 pàgina web desenvolupada per <a target="_blank" href="http://www.flux.cat">flux.cat</a>
             </div>
         </div>
-
     </footer>
     {% block bottom_scripts %}
         {% render(controller("cmf_create.jsloader.controller:includeJSFilesAction", { "editor": "ckeditor", "_locale": app.request.locale })) %}
