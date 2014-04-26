@@ -34,6 +34,7 @@ div.main-header img {
 div.main-header h1 {
     font-size: 14px;
     margin-bottom: 60px;
+    margin-top: 60px;
 }
 
 a.create-ui-toggle {

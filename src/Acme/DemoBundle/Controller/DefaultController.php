@@ -14,4 +14,17 @@ class DefaultController extends Controller
     {
         return $this->redirect('/', 301);
     }
+
+    /**
+     * @return Response
+     */
+    public function logoutAction()
+    {
+        $token = $this->get('security.context')->getToken();
+        $token->setAuthenticated(false);
+        //$this->get('security.context')->setToken(null);
+        $this->get('request')->getSession()->invalidate();
+
+        return $this->redirect('/', 301);
+    }
 }

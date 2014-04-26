@@ -21,7 +21,10 @@ security:
             pattern: ^/
             anonymous: ~
             http_basic:
-                realm: "Secured Area"
+                realm: "Area administrador"
+            logout:
+                path:   /logout
+                target: /
 
     access_control:
         #- { path: ^(/(de|fr|en))?/admin, roles: ROLE_ADMIN }

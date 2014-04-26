@@ -1,3 +1,7 @@
 acme_demo_login:
     pattern:  /login
     defaults: { _controller: AcmeDemoBundle:Default:login }
+
+acme_demo_logout:
+    pattern:  /logout
+    defaults: { _controller: AcmeDemoBundle:Default:logout }
