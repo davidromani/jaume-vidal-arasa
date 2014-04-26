@@ -89,15 +89,13 @@ div.left-side-submenu .nav>li {
     border: none;
 }
 
-hr {
-    border-top: 1px solid #000;
+.navbar-nav {
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+    float: none;
 }
 
-@media (min-width: 768px){
-    .navbar-nav{
-        margin: 0 auto;
-        display: table;
-        table-layout: fixed;
-        float:none;
-    }
+hr {
+    border-top: 1px solid #000;
 }
