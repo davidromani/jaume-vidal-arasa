@@ -26,6 +26,7 @@ parameters:
     project_web_title: 'my project title'
     global_meta_author: 'my company'
     global_meta_keywords: 'my keywords'
+    global_meta_description: 'my description'
     google_analytics_enabled: true
     google_analytics_account: 'UA-XXXXXXXX-Y'
     google_analytics_domain:  'my.domain.com'

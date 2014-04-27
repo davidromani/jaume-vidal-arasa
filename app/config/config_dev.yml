@@ -35,3 +35,7 @@ swiftmailer:
 cmf_create:
     security:
         role: IS_AUTHENTICATED_ANONYMOUSLY
+
+twig:
+    globals:
+        google_analytics_enabled: false
