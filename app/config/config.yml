@@ -29,6 +29,13 @@ framework:
 
 # Twig Configuration
 twig:
+    globals:
+        project_web_title:        "%project_web_title%"
+        google_analytics_enabled: "%google_analytics_enabled%"
+        google_analytics_account: "%google_analytics_account%"
+        google_analytics_domain:  "%google_analytics_domain%"
+        global_meta_author:       "%global_meta_author%"
+        global_meta_keywords:     "%global_meta_keywords%"
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     form:

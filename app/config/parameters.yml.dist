@@ -23,3 +23,9 @@ parameters:
     locale:            en
     locales:           [en, es, ca]
     secret:            ThisTokenIsNotSoSecretChangeIt
+    project_web_title: 'my project title'
+    global_meta_author: 'my company'
+    global_meta_keywords: 'my keywords'
+    google_analytics_enabled: true
+    google_analytics_account: 'UA-XXXXXXXX-Y'
+    google_analytics_domain:  'my.domain.com'

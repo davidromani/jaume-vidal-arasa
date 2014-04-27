@@ -2699,12 +2699,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony-cmf/CoreBundle.git",
-                "reference": "1dffd2c86927732b8e056d878fada64d3f8fe378"
+                "reference": "5bd9d9d2cfd6713546f49078505c2dafd82d8354"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony-cmf/CoreBundle/zipball/1dffd2c86927732b8e056d878fada64d3f8fe378",
-                "reference": "1dffd2c86927732b8e056d878fada64d3f8fe378",
+                "url": "https://api.github.com/repos/symfony-cmf/CoreBundle/zipball/5bd9d9d2cfd6713546f49078505c2dafd82d8354",
+                "reference": "5bd9d9d2cfd6713546f49078505c2dafd82d8354",
                 "shasum": ""
             },
             "require": {
@@ -2751,7 +2751,7 @@
             "keywords": [
                 "Symfony CMF"
             ],
-            "time": "2014-04-15 11:40:25"
+            "time": "2014-04-27 14:27:59"
         },
         {
             "name": "symfony-cmf/create-bundle",
@@ -3410,16 +3410,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.3.12",
+            "version": "v2.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "3574df3d5e0039f3225007b8be534df5c4104503"
+                "reference": "9c4b11915d7409a9cecd155d954f2ade273f3359"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/3574df3d5e0039f3225007b8be534df5c4104503",
-                "reference": "3574df3d5e0039f3225007b8be534df5c4104503",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/9c4b11915d7409a9cecd155d954f2ade273f3359",
+                "reference": "9c4b11915d7409a9cecd155d954f2ade273f3359",
                 "shasum": ""
             },
             "require": {
@@ -3516,7 +3516,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-04-03 05:42:39"
+            "time": "2014-04-27 08:34:33"
         },
         {
             "name": "twig/extensions",
