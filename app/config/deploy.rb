@@ -60,22 +60,20 @@ set :use_set_permissions,   true
 ##############
 # Procedures #
 ##############
-#namespace :jsroutes do
-#    desc "Exposing routes to javascripts"
-#    task :dump do
-#        run "cd #{release_path} && php app/console fos:js-routing:dump --env=prod"
-#    end
-#end
+namespace :phpcr do
+    desc "Execute initial PHPCR setup"
+    task :init do
+        run "cd #{release_path} && php app/console doctrine:database:create && php app/console doctrine:phpcr:init:dbal && php app/console doctrine:phpcr:repository:init && php app/console doctrine:phpcr:fixtures:load -n"
+    end
+end
 
 ############
 # Triggers #
 ############
-#before "deploy:restart" do
-#    jsroutes.dump
-#end
+#before "symfony:cache:warmup", "phpcr:init" # Enable this line only when deploy FIRST time
 after "deploy", "deploy:cleanup"
 
 ###########
 # Logging #
 ###########
-logger.level = Logger::MAX_LEVEL               # Be more verbose by uncommenting this line
+#logger.level = Logger::MAX_LEVEL               # Be more verbose by uncommenting this line
