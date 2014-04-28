@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ae36a4f1a670ee0683c1758c1182aae3",
+    "hash": "cf4efdbb56afbeae5419dd51a3f55dee",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -760,12 +760,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/phpcr-odm.git",
-                "reference": "0de27b6ad57d6854d6b428b60b3347b00a5869c5"
+                "reference": "96684271a53751ee11927c2a18e73965d8acaef9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/phpcr-odm/zipball/0de27b6ad57d6854d6b428b60b3347b00a5869c5",
-                "reference": "0de27b6ad57d6854d6b428b60b3347b00a5869c5",
+                "url": "https://api.github.com/repos/doctrine/phpcr-odm/zipball/96684271a53751ee11927c2a18e73965d8acaef9",
+                "reference": "96684271a53751ee11927c2a18e73965d8acaef9",
                 "shasum": ""
             },
             "require": {
@@ -826,7 +826,7 @@
                 "odm",
                 "phpcr"
             ],
-            "time": "2014-04-23 14:18:08"
+            "time": "2014-04-28 12:58:48"
         },
         {
             "name": "friendsofsymfony/rest-bundle",

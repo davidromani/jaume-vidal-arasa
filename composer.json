@@ -71,7 +71,7 @@
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
         },
-        "ckeditor-commit": "5a3526cc90e3291d0193cffe02e3eceaef1318d3",
+        "ckeditor-commit": "ed8f7e6b52aca90a4969a6d8ce061a5ace976fd4",
         "branch-alias": {
             "dev-master": "1.1-dev"
         }
