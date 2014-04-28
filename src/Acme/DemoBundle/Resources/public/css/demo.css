@@ -51,6 +51,7 @@ footer div.row.sub-footer div a {
 
 footer div.row.sub-footer div a:hover {
     background: none;
+    text-decoration: underline;
 }
 
 a {

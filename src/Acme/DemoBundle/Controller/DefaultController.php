@@ -26,4 +26,14 @@ class DefaultController extends Controller
 
         return $this->redirect('/', 301);
     }
+
+    /**
+     * @return Response
+     */
+    public function addPageAction($parentId)
+    {
+        return $this->render('AcmeDemoBundle:Admin:add.page.html.twig', array(
+                'parentId' => $parentId,
+            ));
+    }
 }

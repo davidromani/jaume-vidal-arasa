@@ -5,3 +5,9 @@ acme_demo_login:
 acme_demo_logout:
     pattern:  /logout
     defaults: { _controller: AcmeDemoBundle:Default:logout }
+
+acme_demo_add_page:
+    pattern:  /add-page/{parentId}
+    defaults: { _controller: AcmeDemoBundle:Default:addPage }
+    requirements:
+        parentId: .+

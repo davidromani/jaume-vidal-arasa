@@ -27,8 +27,14 @@ security:
                 target: /
 
     access_control:
-        #- { path: ^(/(de|fr|en))?/admin, roles: ROLE_ADMIN }
+        # Devel public part
+        - { path: ^/_wdt, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/_profiler, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        # Admin public part
+        - { path: ^/logout$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login-check$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        # Secured part of the site
         - { path: ^/login, roles: ROLE_ADMIN }
-        #- { path: ^/efconnect, role: ROLE_USER }
-        #- { path: ^/elfinder, role: ROLE_USER }
-        
+        - { path: ^/add-page$, roles: ROLE_ADMIN }
+        # Public part
+        - { path: ^/.*, role: IS_AUTHENTICATED_ANONYMOUSLY }

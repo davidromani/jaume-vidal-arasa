@@ -32,33 +32,5 @@
     <div class="page__main">
         {% block main %}{% endblock %}
     </div>
-    <footer class="text-center">
-        <div class="row">
-            <div class="col-md-12">
-                <a target="_blank" href="https://www.facebook.com/jaumevidalarasa">facebook</a>
-                <a target="_blank" href="https://twitter.com/jaumevidalarasa">twitter</a>
-            </div>
-        </div>
-        <div class="row sub-footer">
-            <div class="col-md-12">
-                pàgina web desenvolupada per <a target="_blank" href="http://www.flux.cat">flux.cat</a>
-            </div>
-        </div>
-    </footer>
-    <div class="actions">
-        <a href="{{ path('acme_demo_add_page', {parentId: cmfMainContent.id}) }}" class="btn btn-primary btn-xs active" role="button"><span class="glyphicon glyphicon-plus"></span>Afegir pàgina nova aquí</a>
-    </div>
-    {% block bottom_scripts %}
-        {% if is_granted('ROLE_ADMIN') %}
-            {% render(controller("cmf_create.jsloader.controller:includeJSFilesAction", { "editor": "ckeditor", "_locale": app.request.locale })) %}
-        {% endif %}
-        {% if google_analytics_enabled %}
-            <script type="text/javascript">
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-                ga('create', '{{ google_analytics_account }}', '{{ google_analytics_domain }}');
-                ga('send', 'pageview');
-            </script>
-        {% endif %}
-    {% endblock %}
 </body>
 </html>
