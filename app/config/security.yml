@@ -36,5 +36,6 @@ security:
         # Secured part of the site
         - { path: ^/login, roles: ROLE_ADMIN }
         - { path: ^/add-page$, roles: ROLE_ADMIN }
+        - { path: ^/remove-page$, roles: ROLE_ADMIN }
         # Public part
         - { path: ^/.*, role: IS_AUTHENTICATED_ANONYMOUSLY }

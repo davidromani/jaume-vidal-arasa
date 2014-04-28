@@ -11,3 +11,9 @@ acme_demo_add_page:
     defaults: { _controller: AcmeDemoBundle:Default:addPage }
     requirements:
         parentId: .+
+
+acme_demo_remove_page:
+    pattern:  /remove-page/{pageId}
+    defaults: { _controller: AcmeDemoBundle:Default:removePage }
+    requirements:
+        pageId: .+

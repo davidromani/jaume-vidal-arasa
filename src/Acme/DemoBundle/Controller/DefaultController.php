@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page;
+use Doctrine\ODM\PHPCR\DocumentManager;
 use Acme\DemoBundle\Form\Type\PageType;
 
 class DefaultController extends Controller
@@ -56,5 +57,25 @@ class DefaultController extends Controller
                 'parentId' => $parentId,
                 'form' => $form->createView(),
             ));
+    }
+
+    /**
+     * @return Response
+     */
+    public function removePageAction(Request $request, $pageId)
+    {
+        /** @var DocumentManager $manager */
+        $manager = $this->get('doctrine_phpcr.odm.document_manager');
+        /** @var Page $page */
+        $page = $manager->find(null, $pageId);
+
+        if (null === $page) {
+            // TODO throw page not found exception
+        }
+
+        $manager->remove($page);
+        $manager->flush();
+
+        return $this->redirect('/', 301);
     }
 }
