@@ -157,7 +157,7 @@ swiftmailer:
 
 # Lunetics Locale
 lunetics_locale:
-    strict_mode: true
+    strict_match: true
     guessing_order:
         - cookie
         - router
