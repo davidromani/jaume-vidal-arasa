@@ -34,6 +34,7 @@
         "symfony-cmf/media-bundle": "1.1.*",
         "lunetics/locale-bundle": "2.2.*",
         "liip/imagine-bundle": "0.21.*",
+        "friendsofsymfony/user-bundle": "~2.0@dev",
         "wjzijderveld/check-bundles": "1.0.*",
         "nelmio/alice": "1.*"
     },
