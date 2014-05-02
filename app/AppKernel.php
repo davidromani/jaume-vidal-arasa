@@ -37,7 +37,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             // FOS
             new FOS\RestBundle\FOSRestBundle(),
-            new FOS\UserBundle\FOSUserBundle(),
+            //new FOS\UserBundle\FOSUserBundle(),
             // JMS
             new JMS\SerializerBundle\JMSSerializerBundle(),
             // Lunetics

@@ -48,10 +48,12 @@
             </div>
         </div>
     </footer>
-    <div class="actions">
-        <a href="{{ path('acme_demo_add_page', {parentId: cmfMainContent.id}) }}" class="btn btn-primary btn-xs active" role="button"><span class="glyphicon glyphicon-plus"></span>Afegir pàgina nova aquí</a>
-        <a href="{{ path('acme_demo_remove_page', {pageId: cmfMainContent.id}) }}" class="btn btn-primary btn-xs active" role="button"><span class="glyphicon glyphicon-minus"></span>Elimina aquesta pàgina</a>
-    </div>
+    {% if is_granted('ROLE_ADMIN') %}
+        <div class="actions">
+            <a href="{{ path('acme_demo_add_page', {parentId: cmfMainContent.id}) }}" class="btn btn-primary btn-xs active" role="button"><span class="glyphicon glyphicon-plus"></span>Afegir pàgina nova aquí</a>
+            <a href="{{ path('acme_demo_remove_page', {pageId: cmfMainContent.id}) }}" class="btn btn-primary btn-xs active" role="button"><span class="glyphicon glyphicon-minus"></span>Elimina aquesta pàgina</a>
+        </div>
+    {% endif %}
     {% block bottom_scripts %}
         {% if is_granted('ROLE_ADMIN') %}
             {% render(controller("cmf_create.jsloader.controller:includeJSFilesAction", { "editor": "ckeditor", "_locale": app.request.locale })) %}

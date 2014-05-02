@@ -47,6 +47,7 @@ footer div.row.sub-footer {
 footer div.row.sub-footer div a {
     margin: 0;
     padding: 0;
+    text-decoration: underline;
 }
 
 footer div.row.sub-footer div a:hover {
