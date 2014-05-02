@@ -23,19 +23,19 @@ security:
             http_basic:
                 realm: "Area administrador"
             logout:
-                path:   /logout
+                path:   /admin/logout
                 target: /
 
     access_control:
         # Devel public part
-        - { path: ^/_wdt, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/_profiler, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/_wdt, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/_profiler, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         # Admin public part
-        - { path: ^/logout$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/login-check$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/logout$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/login-check$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         # Secured part of the site
-        - { path: ^/login, roles: ROLE_ADMIN }
-        - { path: ^/add-page$, roles: ROLE_ADMIN }
-        - { path: ^/remove-page$, roles: ROLE_ADMIN }
+        - { path: ^/admin/login, roles: ROLE_ADMIN }
+        - { path: ^/admin/add-page$, roles: ROLE_ADMIN }
+        - { path: ^/admin/remove-page$, roles: ROLE_ADMIN }
         # Public part
-        - { path: ^/.*, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/.*, roles: IS_AUTHENTICATED_ANONYMOUSLY }

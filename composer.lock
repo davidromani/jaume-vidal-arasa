@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "8893fd6fcb9f9215daa59113c17e8c25",
+    "hash": "b6f99469d839c97fb3bda245fd1a462e",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1758,17 +1758,17 @@
         },
         {
             "name": "lunetics/locale-bundle",
-            "version": "v2.2.3",
+            "version": "v2.3.0",
             "target-dir": "Lunetics/LocaleBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lunetics/LocaleBundle.git",
-                "reference": "889a9acd371b49e603d2e5a21e1ac19fcf027e4f"
+                "reference": "4ecd5cbb62ff465104b5f64d97092c07719624ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lunetics/LocaleBundle/zipball/889a9acd371b49e603d2e5a21e1ac19fcf027e4f",
-                "reference": "889a9acd371b49e603d2e5a21e1ac19fcf027e4f",
+                "url": "https://api.github.com/repos/lunetics/LocaleBundle/zipball/4ecd5cbb62ff465104b5f64d97092c07719624ec",
+                "reference": "4ecd5cbb62ff465104b5f64d97092c07719624ec",
                 "shasum": ""
             },
             "require": {
@@ -1822,7 +1822,7 @@
                 "multilanguage",
                 "router"
             ],
-            "time": "2014-04-28 14:59:39"
+            "time": "2014-04-28 16:10:01"
         },
         {
             "name": "midgard/createphp",

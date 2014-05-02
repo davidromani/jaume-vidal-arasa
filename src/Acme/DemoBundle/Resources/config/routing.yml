@@ -1,19 +1,19 @@
 acme_demo_login:
-    pattern:  /login
+    pattern:  /admin/login
     defaults: { _controller: AcmeDemoBundle:Default:login }
 
 acme_demo_logout:
-    pattern:  /logout
+    pattern:  /admin/logout
     defaults: { _controller: AcmeDemoBundle:Default:logout }
 
 acme_demo_add_page:
-    pattern:  /add-page/{parentId}
+    pattern:  /admin/add-page/{parentId}
     defaults: { _controller: AcmeDemoBundle:Default:addPage }
     requirements:
         parentId: .+
 
 acme_demo_remove_page:
-    pattern:  /remove-page/{pageId}
+    pattern:  /admin/remove-page/{pageId}
     defaults: { _controller: AcmeDemoBundle:Default:removePage }
     requirements:
         pageId: .+

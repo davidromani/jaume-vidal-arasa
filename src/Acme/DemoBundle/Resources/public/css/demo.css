@@ -101,3 +101,21 @@ div.left-side-submenu .nav>li {
 hr {
     border-top: 1px solid #000;
 }
+
+/* CUSTOM TOOLBAR */
+div.actions.custom-toolbar-wrapper {
+    left: 0;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1030;
+    overflow: visible;
+    min-height: 46px;
+    padding: 15px;
+    color: #FFF;
+    /*background: url("../../bundles/cmfcreate/vendor/create/themes/create-ui/img/create-ui-bg.png") repeat scroll 0 0 transparent;*/
+    background-color: rgba(0, 0, 0, .7);
+    font-family: "Futura","Helvetica",Arial;
+    text-decoration: none;
+    font-weight: normal;
+}
