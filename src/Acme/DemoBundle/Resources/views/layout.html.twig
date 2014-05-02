@@ -50,8 +50,27 @@
     </footer>
     {% if is_granted('ROLE_ADMIN') %}
         <div class="actions custom-toolbar-wrapper">
-            <a href="{{ path('acme_demo_add_page', {parentId: cmfMainContent.id}) }}" class="btn btn-success btn-xs active" role="button"><span class="glyphicon glyphicon-plus"></span>Afegir pàgina nova aquí</a>
-            <a href="{{ path('acme_demo_remove_page', {pageId: cmfMainContent.id}) }}" class="btn btn-danger btn-xs active" role="button"><span class="glyphicon glyphicon-minus"></span>Elimina aquesta pàgina</a>
+            <a href="{{ path('acme_demo_add_page', {parentId: cmfMainContent.id}) }}" class="btn btn-success btn-xs active" role="button">Afegir pàgina nova aquí</a>
+            <a href="{{ path('acme_demo_remove_page', {pageId: cmfMainContent.id}) }}" class="btn btn-danger btn-xs active" role="button">Eliminar aquesta pàgina</a>
+            {#<button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#removePageModal">Eliminar aquesta pàgina</button>#}
+        </div>
+        <div class="modal fade" id="removePageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Eliminar pàgina</h4>
+                    </div>
+                    <div class="modal-body">
+                        Avís: aquesta acció eliminarà la pàgina i les pàgines descendents totalment. No podràs recuperar el contingut.<br>
+                        Estas segur que vols continuar?<br>
+                    </div>
+                    <div class="model-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                        <a href="{{ path('acme_demo_remove_page', {pageId: cmfMainContent.id}) }}" class="btn btn-danger btn-xs active" role="button">Sí</a>
+                    </div>
+                </div>
+            </div>
         </div>
     {% endif %}
     {% block bottom_scripts %}

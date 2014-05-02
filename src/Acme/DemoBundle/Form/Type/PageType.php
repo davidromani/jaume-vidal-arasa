@@ -13,12 +13,16 @@ class PageType extends AbstractType
     {
         $builder
             ->add('title', 'text', array(
+                    'label' => 'Títol de la pàgina',
                     'constraints' => new NotBlank(),
                 ))
             ->add('label', 'text', array(
+                    'label' => 'Text del menú',
                     'constraints' => new NotBlank(),
                 ))
-            ->add('save', 'submit');
+            ->add('save', 'submit', array(
+                    'label' => 'Guardar'
+                ));
     }
 
     public function getName()
