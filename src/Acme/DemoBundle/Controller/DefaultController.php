@@ -51,6 +51,8 @@ class DefaultController extends Controller
             $page->setPosition($parentPage, $form->get('title')->getData());
             $manager->persist($page);
             $manager->flush();
+
+            return $this->redirect('/', 301);
         }
 
         return $this->render('AcmeDemoBundle:Admin:add.page.html.twig', array(
