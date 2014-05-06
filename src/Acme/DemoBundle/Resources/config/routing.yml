@@ -9,6 +9,7 @@ acme_demo_logout:
 acme_demo_add_page:
     pattern:  /admin/add-page/{parentId}
     defaults: { _controller: AcmeDemoBundle:Default:addPage }
+    methods: [ POST ]
     requirements:
         parentId: .+
 

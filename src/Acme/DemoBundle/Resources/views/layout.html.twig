@@ -59,17 +59,35 @@
         <div class="modal fade" id="addPageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Afegir pàgina</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>form</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="{{ path('acme_demo_add_page', {parentId: cmfMainContent.id}) }}" class="btn btn-success" role="button">Crear</a>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel·lar</button>
-                    </div>
+                    <form class="form-horizontal" role="form" action="{{ path('acme_demo_add_page', {parentId: cmfMainContent.id}) }}" method="post">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Afegir pàgina</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="title" class="col-sm-3 control-label">Títol pàgina</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="title" required="required">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="menu" class="col-sm-3 control-label">Nom menú</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="menu" required="required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-success">Crear</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel·lar</button>
+                                </div>
+                            </div>
+                            {#<a href="{{ path('acme_demo_add_page', {parentId: cmfMainContent.id}) }}" class="btn btn-success" role="button">Crear</a>#}
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
