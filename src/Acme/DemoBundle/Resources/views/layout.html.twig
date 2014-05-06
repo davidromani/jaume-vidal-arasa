@@ -51,7 +51,9 @@
     {% if is_granted('ROLE_ADMIN') %}
         <div class="actions custom-toolbar-wrapper">
             <a href="{{ path('acme_demo_add_page', {parentId: cmfMainContent.id}) }}" class="btn btn-success btn-xs active" role="button">Afegir pàgina nova aquí</a>
-            <a href="{{ path('acme_demo_remove_page', {pageId: cmfMainContent.id}) }}" class="btn btn-danger btn-xs active" role="button">Eliminar aquesta pàgina</a>
+            {% if app.request.attributes.get('_route') != cr_homepage_basepath %}
+                <a href="{{ path('acme_demo_remove_page', {pageId: cmfMainContent.id}) }}" class="btn btn-danger btn-xs active" role="button">Eliminar aquesta pàgina</a>
+            {% endif %}
             {#<button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#removePageModal">Eliminar aquesta pàgina</button>#}
         </div>
         <div class="modal fade" id="removePageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

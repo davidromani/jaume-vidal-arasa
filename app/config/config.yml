@@ -37,6 +37,7 @@ twig:
         global_meta_author:       "%global_meta_author%"
         global_meta_keywords:     "%global_meta_keywords%"
         global_meta_description:  "%global_meta_description%"
+        cr_homepage_basepath:     "%cr_homepage_basepath%"
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
     form:
