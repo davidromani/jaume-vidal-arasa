@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page;
+use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Doctrine\ODM\PHPCR\DocumentManager;
 use Acme\DemoBundle\Form\Type\PageType;
 
@@ -68,11 +69,12 @@ class DefaultController extends Controller
     {
         /** @var DocumentManager $manager */
         $manager = $this->get('doctrine_phpcr.odm.document_manager');
+
         /** @var Page $page */
         $page = $manager->find(null, $pageId);
 
         if (null === $page) {
-            // TODO throw page not found exception
+            throw new BadRequestHttpException('La pàgina ' . $pageId . ' no existeix, impossible eliminar');
         }
 
         $manager->remove($page);

@@ -689,12 +689,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrinePHPCRBundle.git",
-                "reference": "5bae8669135f4e3e979a600c910f22eca0ac7978"
+                "reference": "9f04b1a69b3901ed788b6385e6ed9f48c110a662"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrinePHPCRBundle/zipball/5bae8669135f4e3e979a600c910f22eca0ac7978",
-                "reference": "5bae8669135f4e3e979a600c910f22eca0ac7978",
+                "url": "https://api.github.com/repos/doctrine/DoctrinePHPCRBundle/zipball/9f04b1a69b3901ed788b6385e6ed9f48c110a662",
+                "reference": "9f04b1a69b3901ed788b6385e6ed9f48c110a662",
                 "shasum": ""
             },
             "require": {
@@ -752,7 +752,7 @@
                 "persistence",
                 "phpcr"
             ],
-            "time": "2014-04-30 11:05:05"
+            "time": "2014-05-05 09:57:51"
         },
         {
             "name": "doctrine/phpcr-odm",
@@ -2768,12 +2768,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony-cmf/CoreBundle.git",
-                "reference": "a828d3d0c98aa5578e19e28c896bd1695bba5263"
+                "reference": "9948cf0313e2f409610e12215a0bbcd96934afc8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony-cmf/CoreBundle/zipball/a828d3d0c98aa5578e19e28c896bd1695bba5263",
-                "reference": "a828d3d0c98aa5578e19e28c896bd1695bba5263",
+                "url": "https://api.github.com/repos/symfony-cmf/CoreBundle/zipball/9948cf0313e2f409610e12215a0bbcd96934afc8",
+                "reference": "9948cf0313e2f409610e12215a0bbcd96934afc8",
                 "shasum": ""
             },
             "require": {
@@ -2820,7 +2820,7 @@
             "keywords": [
                 "Symfony CMF"
             ],
-            "time": "2014-04-30 08:16:20"
+            "time": "2014-05-02 17:32:21"
         },
         {
             "name": "symfony-cmf/create-bundle",
