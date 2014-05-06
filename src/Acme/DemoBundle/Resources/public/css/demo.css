@@ -120,7 +120,7 @@ div.actions.custom-toolbar-wrapper {
     font-weight: normal;
 }
 
-div#removePageModal.modal {
+div#removePageModal.modal, div#addPageModal.modal {
     display: none;
     overflow: auto;
     overflow-y: scroll;

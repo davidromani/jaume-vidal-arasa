@@ -50,34 +50,54 @@
     </footer>
     {% if is_granted('ROLE_ADMIN') %}
         <div class="actions custom-toolbar-wrapper">
-            <a href="{{ path('acme_demo_add_page', {parentId: cmfMainContent.id}) }}" class="btn btn-success btn-xs active" role="button"><span class="glyphicon glyphicon-plus"></span>&nbsp;Afegir pàgina nova aquí</a>
+            <a class="btn btn-success btn-xs active" role="button" data-toggle="modal" data-target="#addPageModal"><span class="glyphicon glyphicon-plus"></span>&nbsp;Afegir pàgina nova aquí</a>
             {% if app.request.attributes.get('_route') != cr_homepage_basepath %}
                 <a class="btn btn-danger btn-xs active" role="button" data-toggle="modal" data-target="#removePageModal"><span class="glyphicon glyphicon-minus"></span>&nbsp;Eliminar aquesta pàgina</a>
             {% endif %}
-            {#<button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#removePageModal">Eliminar aquesta pàgina</button>#}
         </div>
-        <div class="modal fade" id="removePageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        {# ADD PAGE MODAL PANEL #}
+        <div class="modal fade" id="addPageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Eliminar pàgina</h4>
+                        <h4 class="modal-title" id="myModalLabel">Afegir pàgina</h4>
                     </div>
                     <div class="modal-body">
-                        <div class="alert alert-danger">
-                            <p>Aquesta acció eliminarà la pàgina i les seves pàgines descendents totalment. No podràs recuperar el contingut.</p>
-                        </div>
-                        <div class="alert alert-danger">
-                            <h4>Estas segur que vols continuar?</h4>
-                        </div>
+                        <p>form</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-                        <a href="{{ path('acme_demo_remove_page', {pageId: cmfMainContent.id}) }}" class="btn btn-danger active" role="button">Sí</a>
+                        <a href="{{ path('acme_demo_add_page', {parentId: cmfMainContent.id}) }}" class="btn btn-success" role="button">Crear</a>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel·lar</button>
                     </div>
                 </div>
             </div>
         </div>
+        {% if app.request.attributes.get('_route') != cr_homepage_basepath %}
+            {# REMOVE PAGE MODAL PANEL #}
+            <div class="modal fade" id="removePageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title" id="myModalLabel">Eliminar pàgina</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="alert alert-danger">
+                                <p>Aquesta acció eliminarà la pàgina i les seves pàgines descendents totalment. No podràs recuperar el contingut.</p>
+                            </div>
+                            <div class="alert alert-danger">
+                                <h4>Estas segur que vols continuar?</h4>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{{ path('acme_demo_remove_page', {pageId: cmfMainContent.id}) }}" class="btn btn-danger" role="button">Sí</a>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
     {% endif %}
     {% block bottom_scripts %}
         {% if is_granted('ROLE_ADMIN') %}
