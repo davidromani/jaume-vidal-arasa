@@ -59,7 +59,7 @@
         <div class="modal fade" id="addPageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form class="form-horizontal" role="form" action="{{ path('acme_demo_add_page', {parentId: cmfMainContent.id}) }}" method="post">
+                    <form class="form-horizontal" role="form" action="{{ path('acme_demo_add_page') }}" method="post">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                             <h4 class="modal-title" id="myModalLabel">Afegir pàgina</h4>
@@ -68,13 +68,13 @@
                             <div class="form-group">
                                 <label for="title" class="col-sm-3 control-label">Títol pàgina</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="title" required="required">
+                                    <input type="text" class="form-control" id="title" name="title" required="required">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="menu" class="col-sm-3 control-label">Nom menú</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="menu" required="required">
+                                    <input type="text" class="form-control" id="menu" name="menu" required="required">
                                 </div>
                             </div>
                         </div>

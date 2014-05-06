@@ -7,11 +7,11 @@ acme_demo_logout:
     defaults: { _controller: AcmeDemoBundle:Default:logout }
 
 acme_demo_add_page:
-    pattern:  /admin/add-page/{parentId}
+    pattern:  /admin/add-page
     defaults: { _controller: AcmeDemoBundle:Default:addPage }
     methods: [ POST ]
-    requirements:
-        parentId: .+
+#    requirements:
+#        parentId: .+
 
 acme_demo_remove_page:
     pattern:  /admin/remove-page/{pageId}

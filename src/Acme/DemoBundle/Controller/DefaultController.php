@@ -36,10 +36,13 @@ class DefaultController extends Controller
     /**
      * @return Response
      */
-    public function addPageAction(Request $request, $parentId)
+    public function addPageAction(Request $request)
     {
         //$page = new Page();
         $form = $this->createForm(new PageType());
+
+        $request->get('title');
+        $request->get('menu');
 
         $form->handleRequest($request);
         if ($form->isValid()) {
