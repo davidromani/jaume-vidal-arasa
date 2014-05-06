@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Cmf\Bundle\SimpleCmsBundle\Doctrine\Phpcr\Page;
+use Symfony\Cmf\Component\Routing\ContentAwareGenerator;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Doctrine\ODM\PHPCR\DocumentManager;
 use Acme\DemoBundle\Form\Type\PageType;
@@ -67,7 +68,9 @@ class DefaultController extends Controller
      */
     public function removePageAction(Request $request, $pageId)
     {
-        if ($pageId == $this->container->getParameter('cr_homepage_basepath')) {
+        $crHomepageBasepath = $this->container->getParameter('cr_homepage_basepath');
+
+        if ($pageId == $crHomepageBasepath) {
             throw new BadRequestHttpException('Impossible eliminar la pàgina principal');
         }
 
@@ -84,6 +87,9 @@ class DefaultController extends Controller
         $manager->remove($page);
         $manager->flush();
 
-        return $this->redirect('/', 301);
+        /** @var ContentAwareGenerator $rg */
+        $rg = $this->get('cmf_routing.generator');
+
+        return $this->redirect($rg->generate($crHomepageBasepath), 301);
     }
 }
