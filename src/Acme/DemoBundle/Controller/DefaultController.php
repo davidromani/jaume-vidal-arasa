@@ -67,6 +67,10 @@ class DefaultController extends Controller
      */
     public function removePageAction(Request $request, $pageId)
     {
+        if ($pageId == $this->container->getParameter('cr_homepage_basepath')) {
+            throw new BadRequestHttpException('Impossible eliminar la pàgina principal');
+        }
+
         /** @var DocumentManager $manager */
         $manager = $this->get('doctrine_phpcr.odm.document_manager');
 

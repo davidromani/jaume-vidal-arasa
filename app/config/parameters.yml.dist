@@ -30,3 +30,4 @@ parameters:
     google_analytics_enabled: true
     google_analytics_account: 'UA-XXXXXXXX-Y'
     google_analytics_domain:  'my.domain.com'
+    cr_homepage_basepath: '/cms/simple'
