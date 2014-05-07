@@ -5,7 +5,6 @@
 {% block main %}
     <div class="row">
         <div class="col-xs-3 left-side-submenu">
-            {#{% set menuItem = knp_menu_get('simple', [cmfMainContent.name]) %}#}
             {% if cmfMainContent.children | length == 0 %}
                 {% set menuItem = knp_menu_get('simple', [cmfMainContent.parent.name]) %}
             {% else %}
@@ -14,10 +13,6 @@
             {{ knp_menu_render(menuItem, {'template': 'AcmeDemoBundle:Menu:bootstrap.html.twig', 'currentClass': 'active', 'depth': 1}) }}
         </div>
         <div class="col-xs-9">
-            {#<pre>{{ cmfMainContent.parent | ld }}</pre>#}
-            {#<pre>{{ cmfMainContent.parent.children | length }}</pre>#}
-            {#<pre>{{ cmfMainContent | ld }}</pre>#}
-            {#<pre>{{ cmfMainContent.children | length }}</pre>#}
             {% block worksdetail %}{% endblock %}
         </div>
     </div>

@@ -58,6 +58,10 @@ class DefaultController extends Controller
             throw new BadRequestHttpException('La pàgina ' . $pageId . ' no existeix, impossible crear nova pàgina aquí');
         }
 
+        if (null !== $manager->find(null, $parentId . '/' . Tools::getSlug($title))) {
+            throw new BadRequestHttpException('La pàgina ' . $pageId . ' ja existeix aquí, impossible duplicar');
+        }
+
         $page = new Page();
         $page->setTitle($title);
         $page->setLabel($menu);
