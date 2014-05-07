@@ -78,7 +78,7 @@ class DefaultController extends Controller
         /** @var ContentAwareGenerator $rg */
         $rg = $this->get('cmf_routing.generator');
 
-        return $this->redirect($rg->generate($crHomepageBasepath), 301);
+        return $this->redirect($rg->generate($page->getId()), 301);
     }
 
     /**
