@@ -10,8 +10,6 @@ acme_demo_add_page:
     pattern:  /admin/add-page
     defaults: { _controller: AcmeDemoBundle:Default:addPage }
     methods: [ POST ]
-#    requirements:
-#        parentId: .+
 
 acme_demo_remove_page:
     pattern:  /admin/remove-page/{pageId}

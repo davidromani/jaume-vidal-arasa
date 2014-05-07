@@ -10,6 +10,7 @@ use Symfony\Cmf\Component\Routing\ContentAwareGenerator;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Doctrine\ODM\PHPCR\DocumentManager;
 use Acme\DemoBundle\Form\Type\PageType;
+use Acme\Tools\Tools;
 
 class DefaultController extends Controller
 {
@@ -38,32 +39,46 @@ class DefaultController extends Controller
      */
     public function addPageAction(Request $request)
     {
-        //$page = new Page();
-        $form = $this->createForm(new PageType());
+        $crHomepageBasepath = $this->container->getParameter('cr_homepage_basepath');
+        $parentId = $request->get('parent');
+        $title = $request->get('title');
+        $menu = $request->get('menu');
 
-        $request->get('title');
-        $request->get('menu');
-
-        $form->handleRequest($request);
-        if ($form->isValid()) {
-            $manager = $this->get('doctrine_phpcr.odm.document_manager');
-            $parentPage = $manager->find(null, $parentId);
-            $page = new Page();
-            $page->setTitle($form->get('title')->getData());
-            $page->setLabel($form->get('label')->getData());
-            $page->setBody($form->get('title')->getData() . '.');
-            $page->setDefault('_template', 'AcmeDemoBundle::work.detail.html.twig');
-            $page->setPosition($parentPage, $form->get('title')->getData());
-            $manager->persist($page);
-            $manager->flush();
-
-            return $this->redirect('/', 301);
+        if (empty($parentId) || empty($title) || empty($menu)) {
+            throw new BadRequestHttpException('Impossible crear pàgina');
         }
 
-        return $this->render('AcmeDemoBundle:Admin:add.page.html.twig', array(
-                'parentId' => $parentId,
-                'form' => $form->createView(),
-            ));
+        /** @var DocumentManager $manager */
+        $manager = $this->get('doctrine_phpcr.odm.document_manager');
+
+        /** @var Page $page */
+        $parentPage = $manager->find(null, $parentId);
+
+        if (null === $parentPage) {
+            throw new BadRequestHttpException('La pàgina ' . $pageId . ' no existeix, impossible crear nova pàgina aquí');
+        }
+
+        $page = new Page();
+        $page->setTitle($title);
+        $page->setLabel($menu);
+        $page->setBody($title . '.');
+
+        if ($parentId == $crHomepageBasepath) {
+            // Nivell 1
+            $page->setDefault('_template', 'AcmeDemoBundle:Page:index.html.twig');
+        } else {
+            // Nivell 2
+            $page->setDefault('_template', 'AcmeDemoBundle::work.detail.html.twig');
+        }
+
+        $page->setPosition($parentPage, Tools::getSlug($title));
+        $manager->persist($page);
+        $manager->flush();
+
+        /** @var ContentAwareGenerator $rg */
+        $rg = $this->get('cmf_routing.generator');
+
+        return $this->redirect($rg->generate($crHomepageBasepath), 301);
     }
 
     /**
