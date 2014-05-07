@@ -68,6 +68,8 @@ class DefaultController extends Controller
             $page->setDefault('_template', 'AcmeDemoBundle:Page:index.html.twig');
         } else {
             // Nivell 2
+            $parentPage->setDefault('_template', 'AcmeDemoBundle::works.html.twig');
+            $manager->persist($parentPage);
             $page->setDefault('_template', 'AcmeDemoBundle::work.detail.html.twig');
         }
 
