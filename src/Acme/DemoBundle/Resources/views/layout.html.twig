@@ -50,7 +50,9 @@
     </footer>
     {% if is_granted('ROLE_ADMIN') %}
         <div class="actions custom-toolbar-wrapper">
-            <a class="btn btn-success btn-xs active" role="button" data-toggle="modal" data-target="#addPageModal"><span class="glyphicon glyphicon-plus"></span>&nbsp;Afegir pàgina nova aquí</a>
+            {% block addPage %}
+                <a class="btn btn-success btn-xs active" role="button" data-toggle="modal" data-target="#addPageModal"><span class="glyphicon glyphicon-plus"></span>&nbsp;Afegir pàgina nova aquí</a>
+            {% endblock %}
             {% if app.request.attributes.get('_route') != cr_homepage_basepath %}
                 <a class="btn btn-danger btn-xs active" role="button" data-toggle="modal" data-target="#removePageModal"><span class="glyphicon glyphicon-minus"></span>&nbsp;Eliminar aquesta pàgina</a>
             {% endif %}
