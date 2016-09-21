@@ -9,3 +9,4 @@ app/app.sqlite
 /app/config/parameters.yml
 /app/check.php
 /app/SymfonyRequirements.php
+/app/config/deploy.rb
