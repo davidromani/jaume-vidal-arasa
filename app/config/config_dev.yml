@@ -39,3 +39,9 @@ cmf_create:
 twig:
     globals:
         google_analytics_enabled: false
+
+cypress_git_elephant:
+    enable_profiler: false
+    profiler_repository_path: "%kernel.root_dir%/../"
+    repositories:
+        "JaumeVidalCMF": "%kernel.root_dir%/../"
