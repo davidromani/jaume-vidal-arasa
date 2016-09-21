@@ -1,15 +1,9 @@
 {
-    "name": "symfony-cmf/standard-edition",
-    "homepage": "http://cmf.symfony.com",
-    "license": "MIT",
+    "name": "flux/fibervent",
+    "homepage": "http://www.jaumevidalarasa.cat",
+    "license": "proprietary",
     "type": "project",
-    "description": "The \"Symfony CMF Standard Edition\" distribution",
-    "authors": [
-        {
-            "name": "Symfony CMF Community",
-            "homepage": "https://github.com/symfony-cmf/standard-edition/contributors"
-        }
-    ],
+    "description": "A Symfony2 CMF webapp project to manage Jaume Vidal website",
     "autoload": {
         "psr-0": { "": "src/" }
     },
@@ -37,6 +31,7 @@
         "liip/imagine-bundle": "0.21.*",
         "friendsofsymfony/user-bundle": "~2.0@dev",
         "wjzijderveld/check-bundles": "1.0.*",
+        "cypresslab/gitelephant-bundle": "^0.0.6",
         "nelmio/alice": "1.*"
     },
     "require-dev": {
